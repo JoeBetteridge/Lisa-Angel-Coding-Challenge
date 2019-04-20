@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+
+<head>
+	<title>Contact Form</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">	
+	<link rel="stylesheet" type="text/css" href="style.css" />
+	<link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+</head>
+
+<body>
+
+	<div id="page-wrap">
+				
+		<div id="contact-area">
+			<img src="images/lisa-logo.svg" id="logo">
+			<h1>Contact Us</h1>
+			<!-- Going straight to thank you page as brief requries no server-side handling -->
+			<form method="post" action="thank_you.html">
+				<label for="Name" class="required">Name:</label>
+				<input type="text" name="Name" id="Name" required/>
+	
+				<label for="Email" class="required">Email:</label>
+				<input type="Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" name="Email" id="Email" placeholder="e.g. email@email.com" required/>
+
+				<label for="Phone">Phone Number:</label>
+				<!-- Left as type number in case of international numbers -->
+				<input type="Number" name="Phone" id="Phone"/>
+				
+				<input type="checkbox" name="Newsletter" id="Newsletter" checked/>
+				<label for="Newsletter" class="checkbox">Sign Up To Our Newsletter</label>
+
+				<input type="checkbox" name="Agree" id="Agree" checked/>
+				<label for="Agree" class="checkbox">Agree To Our Privacy Policy</label>
+				
+				<label for="Message" class="required">Enquiry:</label>
+				<textarea name="Message" rows="20" cols="20" id="Message" required></textarea>
+
+				<input type="submit" name="submit" value="Submit" class="submit-button" />
+			</form>
+			
+			<div style="clear: both;"></div>
+					
+		</div>
+	
+	</div>
+
+</body>
+
+</html>
